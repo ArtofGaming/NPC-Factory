@@ -4,8 +4,9 @@ using UnityEngine;
 
 public enum NPCType
 {
-    Farmer,
+    Adventurer,
     Beggar,
+    Farmer,
     Shopowner
 }
 public interface INPC

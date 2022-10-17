@@ -14,10 +14,10 @@ public class NPCSpawner : MonoBehaviour
     {
         m_Beggar = m_Factory.GetNPC(NPCType.Beggar);
         m_Farmer = m_Factory.GetNPC(NPCType.Farmer);
-        m_Shopowner = m_Factory.GetNPC(NPCType.Shopowner);
+        //m_Shopowner = m_Factory.GetNPC(NPCType.Shopowner);
 
-        m_Beggar.Speak();
-        m_Farmer.Speak();
-        m_Shopowner.Speak();
+        //m_Beggar.Speak();
+        //m_Farmer.Speak();
+        //m_Shopowner.Speak();
     }
 }
