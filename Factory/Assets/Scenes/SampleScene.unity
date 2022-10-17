@@ -605,6 +605,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c97ae8ee9c88745883cac046ba2f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cube: {fileID: 1593083133867964010, guid: 301fd6c0ebc9ae64d8f210e950e592f1, type: 3}
+  capsule: {fileID: 427430600783208655, guid: 1ac55e72e9d6b1e4da3475530f8c64df, type: 3}
+  cylinder: {fileID: 7903833373089674583, guid: fef054628c5604746b85a0468edcc864, type: 3}
+  sphere: {fileID: 941068579775691401, guid: 5b2f4df3e8c2872439e581280fea0670, type: 3}
 --- !u!114 &2035544642
 MonoBehaviour:
   m_ObjectHideFlags: 0

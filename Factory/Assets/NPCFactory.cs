@@ -5,6 +5,10 @@ using UnityEngine;
 public class NPCFactory : MonoBehaviour
 {
     GameObject me;
+    public GameObject cube;
+    public GameObject capsule;
+    public GameObject cylinder;
+    public GameObject sphere;
     INPC current;
     //check
     public INPC GetNPC(NPCType type)
@@ -12,18 +16,18 @@ public class NPCFactory : MonoBehaviour
         switch (type)
         {
             case NPCType.Adventurer:
-                me = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                me = GameObject.Instantiate(cube);
                 me.transform.position = new Vector3(8, 0, 0);
                 return null;
             case NPCType.Beggar:
-                me = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+                me = GameObject.Instantiate(capsule);
                 me.transform.position = new Vector3(-5, 0, 0);
                 return null;
             case NPCType.Farmer:
-                me = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+                me = GameObject.Instantiate(cylinder);
                 return null;
             case NPCType.Shopowner:
-                me = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                me = GameObject.Instantiate(sphere);
                 me.transform.position = new Vector3(5, 0, 0);
                 return null;
         }
@@ -36,31 +40,31 @@ public class NPCFactory : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            /*if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit))
             {
                 //Select stage    
-                if (hit.transform.name == "Capsule")
+                if (hit.transform.name == "Capsule(Clone)")
                 {
                     current = new Beggar();
                     current.Speak();
                 }
-                else if (hit.transform.name == "Cube")
+                else if (hit.transform.name == "Cube(Clone)")
                 {
                     current = new Adventurer();
                     current.Speak();
                 }
-                else if (hit.transform.name == "Cylinder")
+                else if (hit.transform.name == "Cylinder(Clone)")
                 {
                     current = new Farmer();
                     current.Speak();
                 }
-                else if (hit.transform.name == "Sphere")
+                else if (hit.transform.name == "Sphere(Clone)")
                 {
                     current = new Shopowner();
                     current.Speak();
                 }
 
-            }*/
+            }
         }
     }
 }
