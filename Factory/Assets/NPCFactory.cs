@@ -11,23 +11,20 @@ public class NPCFactory : MonoBehaviour
         switch (type)
         {
             case NPCType.Adventurer:
-                INPC adventurer = new Adventurer();
-                me = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+                me = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 me.transform.position = new Vector3(10, 0, 0);
-                return current;
+                return null;
             case NPCType.Beggar:
-                INPC beggar = new Beggar();
                 me = GameObject.CreatePrimitive(PrimitiveType.Capsule);
                 me.transform.position = new Vector3(-10, 0, 0);
-                return beggar;
+                return null;
             case NPCType.Farmer:
-                INPC farmer = new Farmer();
                 me = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-                return current;
+                return null;
             case NPCType.Shopowner:
-                INPC shopowner = new Shopowner();
                 me = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                return shopowner;
+                me.transform.position = new Vector3(5, 0, 0);
+                return null;
         }
         return null;
     }
@@ -44,6 +41,21 @@ public class NPCFactory : MonoBehaviour
                 if (hit.transform.name == "Capsule")
                 {
                     current = new Beggar();
+                    current.Speak();
+                }
+                else if (hit.transform.name == "Cube")
+                {
+                    current = new Adventurer();
+                    current.Speak();
+                }
+                else if (hit.transform.name == "Cylinder")
+                {
+                    current = new Farmer();
+                    current.Speak();
+                }
+                else if (hit.transform.name == "Sphere")
+                {
+                    current = new Shopowner();
                     current.Speak();
                 }
 
