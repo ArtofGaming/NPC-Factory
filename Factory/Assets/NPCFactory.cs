@@ -12,11 +12,11 @@ public class NPCFactory : MonoBehaviour
         {
             case NPCType.Adventurer:
                 me = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                me.transform.position = new Vector3(10, 0, 0);
+                me.transform.position = new Vector3(8, 0, 0);
                 return null;
             case NPCType.Beggar:
                 me = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-                me.transform.position = new Vector3(-10, 0, 0);
+                me.transform.position = new Vector3(-5, 0, 0);
                 return null;
             case NPCType.Farmer:
                 me = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
