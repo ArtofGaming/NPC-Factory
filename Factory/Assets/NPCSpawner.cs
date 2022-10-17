@@ -10,7 +10,7 @@ public class NPCSpawner : MonoBehaviour
     private INPC m_Beggar;
     private INPC m_Shopowner;
     private INPC m_Adventurer;
-
+    //check
     public void SpawnVillagers()
     {
         m_Adventurer = m_Factory.GetNPC(NPCType.Adventurer);

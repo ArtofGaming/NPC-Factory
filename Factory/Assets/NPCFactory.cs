@@ -6,6 +6,7 @@ public class NPCFactory : MonoBehaviour
 {
     GameObject me;
     INPC current;
+    //check
     public INPC GetNPC(NPCType type)
     {
         switch (type)

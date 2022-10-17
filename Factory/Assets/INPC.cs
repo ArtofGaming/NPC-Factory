@@ -11,5 +11,6 @@ public enum NPCType
 }
 public interface INPC
 {
+    //check
     void Speak();
 }
